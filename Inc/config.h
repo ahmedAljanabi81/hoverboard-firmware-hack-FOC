@@ -9,6 +9,7 @@
 // Keil uVision: select desired variant from the Target drop down menu (to the right of the Load button)
 // Ubuntu: define the desired build variant here if you want to use make in console
 // or use VARIANT environment variable for example like "make -e VARIANT=VARIANT_NUNCHUK". Select only one at a time.
+#define VARIANT_USART
 #if !defined(PLATFORMIO)
   //#define VARIANT_ADC         // Variant for control via ADC input
   //#define VARIANT_USART       // Variant for Serial control via USART3 input
