@@ -658,49 +658,49 @@
 
 
 // General checks
-#if defined(CONTROL_SERIAL_USART2) && defined(SIDEBOARD_SERIAL_USART2)
+#if defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2)
   #error CONTROL_SERIAL_USART2 and SIDEBOARD_SERIAL_USART2 not allowed, choose one.
 #endif
 
-#if defined(CONTROL_SERIAL_USART3) && defined(SIDEBOARD_SERIAL_USART3)
+#if defined(CONTROL_SERIAL_USART3) || defined(SIDEBOARD_SERIAL_USART3)
   #error CONTROL_SERIAL_USART3 and SIDEBOARD_SERIAL_USART3 not allowed, choose one.
 #endif
 
-#if defined(DEBUG_SERIAL_USART2) && defined(FEEDBACK_SERIAL_USART2)
+#if defined(DEBUG_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2)
   #error DEBUG_SERIAL_USART2 and FEEDBACK_SERIAL_USART2 not allowed, choose one.
 #endif
 
-#if defined(DEBUG_SERIAL_USART3) && defined(FEEDBACK_SERIAL_USART3)
+#if defined(DEBUG_SERIAL_USART3) || defined(FEEDBACK_SERIAL_USART3)
   #error DEBUG_SERIAL_USART3 and FEEDBACK_SERIAL_USART3 not allowed, choose one.
 #endif
 
-#if defined(DEBUG_SERIAL_USART2) && defined(DEBUG_SERIAL_USART3)
+#if defined(DEBUG_SERIAL_USART2) || defined(DEBUG_SERIAL_USART3)
   #error DEBUG_SERIAL_USART2 and DEBUG_SERIAL_USART3 not allowed, choose one.
 #endif
 
-#if defined(CONTROL_PPM_LEFT) && defined(CONTROL_PPM_RIGHT)
+#if defined(CONTROL_PPM_LEFT) || defined(CONTROL_PPM_RIGHT)
   #error CONTROL_PPM_LEFT and CONTROL_PPM_RIGHT not allowed, choose one.
 #endif
 
-#if defined(CONTROL_PWM_LEFT) && defined(CONTROL_PWM_RIGHT)
+#if defined(CONTROL_PWM_LEFT) || defined(CONTROL_PWM_RIGHT)
   #error CONTROL_PWM_LEFT and CONTROL_PWM_RIGHT not allowed, choose one.
 #endif
 
-#if defined(SUPPORT_BUTTONS_LEFT) && defined(SUPPORT_BUTTONS_RIGHT)
+#if defined(SUPPORT_BUTTONS_LEFT) || defined(SUPPORT_BUTTONS_RIGHT)
   #error SUPPORT_BUTTONS_LEFT and SUPPORT_BUTTONS_RIGHT not allowed, choose one.
 #endif
 
 
 // LEFT cable checks
-#if defined(CONTROL_ADC) && (defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2) || defined(DEBUG_SERIAL_USART2))
+#if defined(CONTROL_ADC) || (defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2) || defined(DEBUG_SERIAL_USART2))
   #error CONTROL_ADC and SERIAL_USART2 not allowed. It is on the same cable.
 #endif
 
-#if defined(CONTROL_PPM_LEFT) && (defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2) || defined(DEBUG_SERIAL_USART2))
+#if defined(CONTROL_PPM_LEFT) || (defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2) || defined(DEBUG_SERIAL_USART2))
   #error CONTROL_PPM_LEFT and SERIAL_USART2 not allowed. It is on the same cable.
 #endif
 
-#if defined(CONTROL_PWM_LEFT) && (defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2) || defined(DEBUG_SERIAL_USART2))
+#if defined(CONTROL_PWM_LEFT) || (defined(CONTROL_SERIAL_USART2) || defined(SIDEBOARD_SERIAL_USART2) || defined(FEEDBACK_SERIAL_USART2) || defined(DEBUG_SERIAL_USART2))
   #error CONTROL_PWM_LEFT and SERIAL_USART2 not allowed. It is on the same cable.
 #endif
 
